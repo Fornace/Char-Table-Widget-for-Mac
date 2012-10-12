@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <title>Fornace™ is on his way to planet Earth</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="author" content="francesco - www.fornacestudio.com" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <style>
+      
+      * {
+      margin:0;
+      padding: 0;
+      }
+      
+      #chartable {
+      font-family: glyphish;
+      height: 1000px;
+      width:600px;
+      height:400px;
+      padding	-right:30px;
+      overflow-y: scroll;
+      }    
+      
+      body {
+      font-family: arial, helvetica, sans-serif;
+      color: #aaa;
+      text-align: center;
+      font-size: 16px;
+      background: #fafafa;
+      border-radius: 20px;
+      }
+      
+      .ch {
+      width: 50px;
+      border: 1px solid #eee;
+      display: inline-block;
+      height: 60px;
+      vertical-align: top;
+      margin: 1px -0.57em 0 0;
+      color: #444;
+      font-size: 2em;
+      position: relative;
+      padding-top: 15px;
+      background: #fff;
+      border-radius: 3px;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      transition: all .3s;
+      }
+      
+      .ch:hover {
+      background: #444;
+      border: 1px solid #dfdfdf;
+      color: #eee;
+      }
+      
+      .st {
+      border-top: 1px solid #eee;
+      height: 15px;
+      padding: 3px;
+      position: absolute;
+      bottom: 0px;
+      width: 44px;
+      font-size: 0.4em;
+      color: #ddd;
+      font-family: helvetica, arial, sans-serif;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      transition: all .3s;
+      }
+      
+      .ch:hover .st {
+      background: #666;
+      }
+      
+      .clear {
+      clear:both;
+      width: 100%;
+      height: 20px;
+      font-size: 0.5em;
+      line-height: 23px;
+      color: #d6d6d6;
+      text-shadow: 0 1px 0 #fff;
+      font-family: arial, helvetica, sans-serif;
+      }
+      
+      .clear:before, .clear:after {
+      content: " ––– ";
+      }
+      
+      #title-options {
+      background: #444;
+      font-size: 0.65em;
+      color: #eee;
+      padding-top: 2px;
+      }
+      
+      #change {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      color: #333;
+      display:block;
+      padding: 1px 3px;
+      background: #fff;
+      border-radius:3px;
+      cursor: pointer;
+      }
+      
+      #prompt {
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      color: #333;
+      display:block;
+      padding: 1px 3px;
+      background: #fff;
+      border-radius:3px;
+      cursor: pointer;
+      }
+      
+    </style>
+  </head>
+  <body>
+  <div id="title-options"><h1>CHAR TABLE</h1><a id="change" onClick="changeFont()">SET FONT</a></div>
+  <div id="prompt">
+    <input id="fontname" type="text" placeholder="Type Font Name..." onChange="changeFont2()"></input>
+  </div>
+    <div id="chartable">
+      <div class="clear">NUMERI</div>
+      <div class="ch"> <div class="st">space</div></div>
+      <div class="ch">0<div class="st">0</div></div>
+      <div class="ch">1<div class="st">1</div></div>
+      <div class="ch">2<div class="st">2</div></div>
+      <div class="ch">3<div class="st">3</div></div>
+      <div class="ch">4<div class="st">4</div></div>
+      <div class="ch">5<div class="st">5</div></div>
+      <div class="ch">6<div class="st">6</div></div>
+      <div class="ch">7<div class="st">7</div></div>
+      <div class="ch">8<div class="st">8</div></div>
+      <div class="ch">9<div class="st">9</div></div>
+      <div class="clear">MAIUSCOLE</div>
+      <div class="ch">A<div class="st">A</div></div>
+      <div class="ch">B<div class="st">B</div></div>
+      <div class="ch">C<div class="st">C</div></div>
+      <div class="ch">D<div class="st">D</div></div>
+      <div class="ch">E<div class="st">E</div></div>
+      <div class="ch">F<div class="st">F</div></div>
+      <div class="ch">G<div class="st">G</div></div>
+      <div class="ch">H<div class="st">H</div></div>
+      <div class="ch">I<div class="st">I</div></div>
+      <div class="ch">J<div class="st">J</div></div>
+      <div class="ch">K<div class="st">K</div></div>
+      <div class="ch">L<div class="st">L</div></div>
+      <div class="ch">M<div class="st">M</div></div>
+      <div class="ch">N<div class="st">N</div></div>
+      <div class="ch">O<div class="st">O</div></div>
+      <div class="ch">P<div class="st">P</div></div>
+      <div class="ch">Q<div class="st">Q</div></div>
+      <div class="ch">R<div class="st">R</div></div>
+      <div class="ch">S<div class="st">S</div></div>
+      <div class="ch">T<div class="st">T</div></div>
+      <div class="ch">U<div class="st">U</div></div>
+      <div class="ch">V<div class="st">V</div></div>
+      <div class="ch">W<div class="st">W</div></div>
+      <div class="ch">X<div class="st">X</div></div>
+      <div class="ch">Y<div class="st">Y</div></div>
+      <div class="ch">Z<div class="st">Z</div></div>
+      <div class="clear">MINUSCOLE</div>
+      <div class="ch">a<div class="st">a</div></div>
+      <div class="ch">b<div class="st">b</div></div>
+      <div class="ch">c<div class="st">c</div></div>
+      <div class="ch">d<div class="st">d</div></div>
+      <div class="ch">e<div class="st">e</div></div>
+      <div class="ch">f<div class="st">f</div></div>
+      <div class="ch">g<div class="st">g</div></div>
+      <div class="ch">h<div class="st">h</div></div>
+      <div class="ch">i<div class="st">i</div></div>
+      <div class="ch">j<div class="st">j</div></div>
+      <div class="ch">k<div class="st">k</div></div>
+      <div class="ch">l<div class="st">l</div></div>
+      <div class="ch">m<div class="st">m</div></div>
+      <div class="ch">n<div class="st">n</div></div>
+      <div class="ch">o<div class="st">o</div></div>
+      <div class="ch">p<div class="st">p</div></div>
+      <div class="ch">q<div class="st">q</div></div>
+      <div class="ch">r<div class="st">r</div></div>
+      <div class="ch">s<div class="st">s</div></div>
+      <div class="ch">t<div class="st">t</div></div>
+      <div class="ch">u<div class="st">u</div></div>
+      <div class="ch">v<div class="st">v</div></div>
+      <div class="ch">w<div class="st">w</div></div>
+      <div class="ch">x<div class="st">x</div></div>
+      <div class="ch">y<div class="st">y</div></div>
+      <div class="ch">z<div class="st">z</div></div>
+      <div class="clear">SIMBOLI</div>
+      <div class="ch">-<div class="st">-</div></div>
+      <div class="ch">,<div class="st">,</div></div>
+      <div class="ch">;<div class="st">;</div></div>
+      <div class="ch">:<div class="st">:</div></div>
+      <div class="ch">!<div class="st">!</div></div>
+      <div class="ch">?<div class="st">?</div></div>
+      <div class="ch">.<div class="st">.</div></div>
+      <div class="ch">"<div class="st">"</div></div>
+      <div class="ch">«<div class="st">«</div></div>
+      <div class="ch">»<div class="st">»</div></div>
+      <div class="ch">(<div class="st">(</div></div>
+      <div class="ch">)<div class="st">)</div></div>
+      <div class="ch">@<div class="st">@</div></div>
+      <div class="ch">*<div class="st">*</div></div>
+      <div class="ch">/<div class="st">/</div></div>
+      <div class="ch">&<div class="st">&</div></div>
+      <div class="ch">#<div class="st">#</div></div>
+      <div class="ch">%<div class="st">%</div></div>
+      <div class="ch">+<div class="st">+</div></div>
+      <div class="ch"><<div class="st"><</div></div>
+      <div class="ch">=<div class="st">=</div></div>
+      <div class="ch">><div class="st">></div></div>
+      <div class="ch">$<div class="st">$</div></div>
+      <div class="ch">€<div class="st">€</div></div>
+      <div class="ch">·<div class="st">·</div></div>
+      <div class="ch">±<div class="st">±</div></div>
+      <div class="ch">÷<div class="st">÷</div></div>
+      <div class="ch">×<div class="st">×</div></div>
+      <div class="ch">¬<div class="st">¬</div></div>
+      <div class="ch">|<div class="st">|</div></div>
+      <div class="ch">¦<div class="st">¦</div></div>
+      <div class="ch">~<div class="st">~</div></div>
+      <div class="ch">¤<div class="st">¤</div></div>
+      <div class="ch">¢<div class="st">¢</div></div>
+      <div class="ch">£<div class="st">£</div></div>
+      <div class="ch">¥<div class="st">¥</div></div>
+      <div class="ch">¹<div class="st">¹</div></div>
+      <div class="ch">½<div class="st">½</div></div>
+      <div class="ch">¼<div class="st">¼</div></div>
+      <div class="ch">²<div class="st">²</div></div>
+      <div class="ch">³<div class="st">³</div></div>
+      <div class="ch">¾<div class="st">¾</div></div>
+      <div class="ch">_<div class="st">_</div></div>
+      <div class="ch">¡<div class="st">¡</div></div>
+      <div class="ch">¿<div class="st">¿</div></div>
+      <div class="ch">\<div class="st">\</div></div>
+      <div class="ch">[<div class="st">[</div></div>
+      <div class="ch">]<div class="st">]</div></div>
+      <div class="ch">{<div class="st">{</div></div>
+      <div class="ch">}<div class="st">}</div></div>
+      <div class="ch">`<div class="st">`</div></div>
+      <div class="ch">´<div class="st">´</div></div>
+      <div class="ch">^<div class="st">^</div></div>
+      <div class="ch">¯<div class="st">¯</div></div>
+      <div class="ch">¨<div class="st">¨</div></div>
+      <div class="ch">¸<div class="st">¸</div></div>
+      <div class="ch">§<div class="st">§</div></div>
+      <div class="ch">¶<div class="st">¶</div></div>
+      <div class="ch">©<div class="st">©</div></div>
+      <div class="ch">®<div class="st">®</div></div>
+      <div class="ch">°<div class="st">°</div></div>
+      <div class="clear">ACCENTATE</div>
+      <div class="ch">ª<div class="st">ª</div></div>
+      <div class="ch">Á<div class="st">Á</div></div>
+      <div class="ch">á<div class="st">á</div></div>
+      <div class="ch">À<div class="st">À</div></div>
+      <div class="ch">à<div class="st">à</div></div>
+      <div class="ch">Â<div class="st">Â</div></div>
+      <div class="ch">â<div class="st">â</div></div>
+      <div class="ch">Å<div class="st">Å</div></div>
+      <div class="ch">å<div class="st">å</div></div>
+      <div class="ch">Ä<div class="st">Ä</div></div>
+      <div class="ch">ä<div class="st">ä</div></div>
+      <div class="ch">Ã<div class="st">Ã</div></div>
+      <div class="ch">ã<div class="st">ã</div></div>
+      <div class="ch">Æ<div class="st">Æ</div></div>
+      <div class="ch">æ<div class="st">æ</div></div>
+      <div class="ch">Ç<div class="st">Ç</div></div>
+      <div class="ch">ç<div class="st">ç</div></div>
+      <div class="ch">Ð<div class="st">Ð</div></div>
+      <div class="ch">ð<div class="st">ð</div></div>
+      <div class="ch">É<div class="st">É</div></div>
+      <div class="ch">é<div class="st">é</div></div>
+      <div class="ch">È<div class="st">È</div></div>
+      <div class="ch">è<div class="st">è</div></div>
+      <div class="ch">Ê<div class="st">Ê</div></div>
+      <div class="ch">ê<div class="st">ê</div></div>
+      <div class="ch">Ë<div class="st">Ë</div></div>
+      <div class="ch">ë<div class="st">ë</div></div>
+      <div class="ch">Í<div class="st">Í</div></div>
+      <div class="ch">í<div class="st">í</div></div>
+      <div class="ch">Ì<div class="st">Ì</div></div>
+      <div class="ch">ì<div class="st">ì</div></div>
+      <div class="ch">Î<div class="st">Î</div></div>
+      <div class="ch">î<div class="st">î</div></div>
+      <div class="ch">Ï<div class="st">Ï</div></div>
+      <div class="ch">ï<div class="st">ï</div></div>
+      <div class="ch">Ñ<div class="st">Ñ</div></div>
+      <div class="ch">ñ<div class="st">ñ</div></div>
+      <div class="ch">º<div class="st">º</div></div>
+      <div class="ch">Ó<div class="st">Ó</div></div>
+      <div class="ch">ó<div class="st">ó</div></div>
+      <div class="ch">Ò<div class="st">Ò</div></div>
+      <div class="ch">ò<div class="st">ò</div></div>
+      <div class="ch">Ô<div class="st">Ô</div></div>
+      <div class="ch">ô<div class="st">ô</div></div>
+      <div class="ch">Ö<div class="st">Ö</div></div>
+      <div class="ch">ö<div class="st">ö</div></div>
+      <div class="ch">Õ<div class="st">Õ</div></div>
+      <div class="ch">õ<div class="st">õ</div></div>
+      <div class="ch">Ø<div class="st">Ø</div></div>
+      <div class="ch">ø<div class="st">ø</div></div>
+      <div class="ch">ß<div class="st">ß</div></div>
+      <div class="ch">Ú<div class="st">Ú</div></div>
+      <div class="ch">ú<div class="st">ú</div></div>
+      <div class="ch">Ù<div class="st">Ù</div></div>
+      <div class="ch">ù<div class="st">ù</div></div>
+      <div class="ch">Û<div class="st">Û</div></div>
+      <div class="ch">û<div class="st">û</div></div>
+      <div class="ch">Ü<div class="st">Ü</div></div>
+      <div class="ch">ü<div class="st">ü</div></div>
+      <div class="ch">Ý<div class="st">Ý</div></div>
+      <div class="ch">ý<div class="st">ý</div></div>
+      <div class="ch">ÿ<div class="st">ÿ</div></div>
+      <div class="ch">Þ<div class="st">Þ</div></div>
+      <div class="ch">þ<div class="st">þ</div></div>
+      <div class="ch">µ<div class="st">µ</div></div>
+    </div>
+    <script>
+    function changeFont() {
+    var ch = document.getElementById("chartable");
+    var font = prompt("Type font name", "Glyphish");
+    ch.style.fontFamily=font;
+    }
+    
+    function changeFont2() {
+    var ch = document.getElementById("chartable");
+    var font = document.getElementById("prompt").value;
+    ch.style.fontFamily=font;
+    }
+    
+    </script>
+    
+  </body>
+</html>
